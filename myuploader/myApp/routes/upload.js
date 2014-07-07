@@ -15,7 +15,7 @@ router.post("/", function(req, res, next){
 		}
 		fs.exists(req.files.myFile.path, function(exists) { 
 			if(exists) { 
-				fs.rename(req.files.myFile.path, req.files.myFile.path.replace(req.files.myFile.name, req.files.myFile.originalname), function(err){throw err;});
+				fs.rename(req.files.myFile.path, req.files.myFile.path.replace(req.files.myFile.name, req.files.myFile.originalname), function(err){});
 				res.end("Uploaded!"); 
 			} else { 
 				res.end("Lag gaye!"); 
